@@ -1,0 +1,122 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, #fe6f9c, #8e4098);
+    min-height: 100vh;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 90vh;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator-grid button {
+    cursor: pointer;
+    font-size: 1.7rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: #050505c8;
+    color: #faf7f7cd;
+}
+
+.calculator-grid .number {
+    background-color: #050505ad;
+}
+
+.calculator-grid button:hover {
+    background-color: #0505054c;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: #030303e9;
+    color: #faf7f7cd;
+    border: 1px solid white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: #ffffff95;
+    font-size: 1.2rem;
+}
+
+.output .current-operand {
+    font-size: 2.3rem;
+}
+
+p.notes {
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.alerts {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #050505d6;
+}
+
+.alert-box {
+    
+    height: 40%;
+    width: 25%;
+    position: relative;
+    top: 30%;
+    left: 37.5%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fafafaf2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.alert-box h2 {
+    margin: 0;
+    padding: 0;
+
+}
+
+.close-button {
+    width: 50%;
+    border: none;
+    background-color: #5aeda6e6;
+    padding: 10px 0;
+
+}
+
+.close-button:hover {
+    background-color: #167d4bf8;
+    cursor: pointer;
+}
+
+.active {
+    visibility: visible;
+}
+
+
